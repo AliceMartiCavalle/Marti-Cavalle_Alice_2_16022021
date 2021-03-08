@@ -1,0 +1,182 @@
+/*Media queries tablettes*/
+/*C'est plus pertinent de laisser un min-width parce qu'il y a des styles ordi qu'on retrouve sur tel*/
+@media screen and (min-width: 769px) and (max-width: 991px) { 
+	.tel {			/*border: 2px solid green;*/
+		display: none;
+	}
+	.ordi {			/*border: 2px solid orange;*/						
+		display: run-in;
+	}
+
+	/*Pour l'ensemble de la page*/
+
+		/*deco*/
+	body {
+		padding : 0;
+	}
+	h2 {
+		font-size: 1em;
+	}
+
+	/*header*/
+
+	header .ordi {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+	.logo {
+		margin-bottom: 10px;
+	}
+
+	/*recherche*/
+
+	#recherche {					
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+	h1 {
+		font-size: 1.2em;
+	}
+
+	/*filtres*/
+
+	#filtres {					
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#filtres h3 {
+		margin-bottom: 15px;
+	}
+	#filtres .ligne {						
+		flex-direction: column;
+	}
+	#filtres .ligne ul li {
+		margin: 0 15px 15px 0;
+	}
+
+	/*hebergement*/
+
+	#hebergements { 	 			
+						/* border: 1px solid green; */
+		flex-direction: column-reverse;
+		align-items: center; /*pourquoi #populaires est centré et pas #classique ?*/
+		margin-top: 10px;
+	}
+	#classiques {										
+		justify-content: center;
+		width: 95%;
+		align-items: flex-start;
+		margin: 0;
+	}
+	.box {
+		max-width: 300px;
+	}
+	#populaires { /*cette partie est pas très responsive*/
+										/* border: 1px solid purple; */
+		padding: 10px;
+		margin: 0;
+		flex-direction: row;
+		align-items: center;
+		width: 95%; /*idem que classiques*/
+		min-width: 720px; /*idem que classiques*/
+		height: 210px;
+		/* min-width: 750px; */
+		margin-bottom: 15px;
+	}
+	#populaires > .ligne {		
+											/* border: 2px solid red; */
+		width: 10%;
+		justify-content: flex-start;
+		flex-direction: column-reverse;
+		padding: 0;
+	}
+	.boxLigne {
+		flex-grow : 1;
+		flex-basis : 0;
+	}
+	.boxLigne a {						
+										/* border: 1px solid blue; */
+		flex-direction: column;
+		justify-content: stretch;
+		align-items: flex-start;
+		margin: 10px;
+		/* width: 90%; */
+		/* max-height: 190px; */
+		height: 190px;
+		/* min-width: 190px; après le texte dépasse */
+		/* width : 40%; */
+	}
+	.boxLigne img {
+											/*border: 1px solid red;*/
+		border-radius: 15px 15px 0 0;
+		max-height: 110px;
+		width: 100%;
+       
+	}
+	.boxLigne .texte {
+											/* border: 1px solid yellow; */
+		/* margin : 5px 0 0 10px; */
+		/* align-items: flex-start; */
+		width: 90%; /*sinon texte + large que box*/
+		height : 90px;
+		/* max-height: 200px; */
+        /* justify-content: space-between; */
+	}
+	/* .boxLigne:nth-child(3) .texte .colonne { 
+											border: 1px solid green;
+		margin-bottom: 0;
+		/*d'où vient cet espace à droite ? titre passe à la ligne
+	} */
+	/* .boxLigne:nth-child(3) .texte .colonne h3 .tel { /*why not ?*/
+											/* border: 1px solid #000; */
+		/* display: visible; */
+	/* } */
+
+	/*activités grid*/
+
+	#activites {
+		align-items: center;
+		padding: 20px;
+	}
+	#activites h2 {						
+										/*border: 1px solid;*/
+		align-self: flex-start;
+		margin: 0 0 20px 0px;
+	}
+	.grid { 							
+											/* border: 1px solid; */
+		grid-template-rows: 200px 400px;
+		grid-template-columns: repeat(2, 1fr);
+		/* grid-gap: 40px; */
+	}
+	.sousGrid {					
+										/* border: 1px solid blue;		 */
+		/* height: 200%; */
+		grid-template: 50% 50% / 1fr;
+		grid-gap: 40px;
+	}
+	.sousGrid:nth-child(4) {			
+										/* border: 1px solid red; */
+		grid-template: 50% 50% / 1fr;
+		grid-gap: 40px;
+	}
+	.boxShadow:nth-child(2), .boxShadow:nth-child(5) {			
+											/* border: 1px solid green; */
+		margin-top: 0px;
+	}
+
+	/*footer*/
+
+	footer {			
+		padding-left: 50px;
+	}
+	footer .colonne {
+		margin-right: 10%;
+	}
+}/*fin media*/
