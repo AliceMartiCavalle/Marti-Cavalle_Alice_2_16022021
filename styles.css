@@ -46,7 +46,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-							/* border: 1px solid #000; */
+							
 	line-height: 1;
 }
 ol, ul {
@@ -66,6 +66,7 @@ table {
 }
 
 /*ordi*/
+
 @font-face {
 	font-family: 'Raleway';
 	src: url('./police/Raleway-Light.ttf');
@@ -81,17 +82,16 @@ table {
 .ordi {									
 	display: run-in;
 }
-/* .tablette {
-	display: none;
-} */
 
 /*Pour l'ensemble de la page*/
 
 	/*deco*/
 
-body {					/*border: 1px solid red;*/			
+body {								
 	padding : 0 10px;
 	font-family: Raleway, Verdana, Arial, sans-serif;
+    max-width: 1500px;
+    margin: auto;
 }
 
 h1, h2, h3, strong {
@@ -158,8 +158,8 @@ header {
 	margin-bottom: 20px;
 }
 .logo {
-	height: 63px;
-	width: 135px;
+	/* height: 63px; */
+	width: 15%;
 	cursor: auto;
 	}
 nav ul {
@@ -226,7 +226,7 @@ input:focus::placeholder {
 	transition: 200ms;
 }
 #bouton:hover {
-	box-shadow: inset 7px 7px 7px blue; /*mouvement secondaire ?*/
+	box-shadow: inset 7px 7px 7px blue; 
 }
 
 /*filtres*/
@@ -316,7 +316,6 @@ input:focus::placeholder {
 	transition: 200ms;
 	width: 30%;
 	min-width: 150px;
-	/* max-width: 400px; */
 	-webkit-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.2); 
 	box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.2);
 }
@@ -349,8 +348,7 @@ input:focus::placeholder {
 	cursor: pointer;
 	color: #0065FC;
 }
-#populaires { /*cette partie est pas très responsive*/
-									/*border: 1px solid purple;*/
+#populaires { 
 	padding: 15px;
 	align-items: stretch;
 	justify-content: stretch;
@@ -359,19 +357,16 @@ input:focus::placeholder {
 	min-width: 300px;
 }
 #populaires > .ligne {			
-	/* width: 90%; */
 	justify-content: space-between;
 	padding: 15px;
 }
 .boxLigne a {				
-									/* border: 1px solid green; */
 	display: flex;
-	align-items: stretch; /*se met en flex-start*/
+	align-items: stretch; 
 	background-color: white;
 	border-radius: 15px;
 	margin: 15px;
 	padding: 3px;
-	/* width: 90%; */
 	height: 102px;
 	min-width: 200px;
 	transition: 200ms;
@@ -384,48 +379,35 @@ input:focus::placeholder {
 	-webkit-box-shadow: 1px 1px 10px 2px rgba(0,0,0,0); 
 	box-shadow: 1px 1px 10px 2px rgba(0,0,0,0);
 }
-.boxLigne img { /*pas 3x la même largeur, why*/
-										/* border: 1px solid red; */
-	/* margin: 2px; */
+.boxLigne img { 
 	border-bottom-left-radius: 15px;
 	border-top-left-radius: 15px;
-	/* min-height: 100px;
-	min-height: 0; */
 	height: 100px;
 	width: 40%;
 	object-fit: cover;
 	min-width: 104px;
 }
 .boxLigne .texte {
-							/* border: 1px solid purple; */
-	/* margin : -5px 10px -5px 15px; */
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	/* height: 100%; */
 	justify-content: space-between;
-	/* height: 110px;
-	min-width: 180px; */
 	width: 60%;
 }
 .boxLigne .texte .colonne {
-								/* border: 1px solid #000;; */
 	align-items: flex-start;
-	/* height : 90%; */
-	/* justify-content: space-between; */
 }
 
 /*activités grid*/
 
 #activites {
-								/* border: 1px solid red; */
 	align-items: flex-start;
 	margin-top: 40px;
 }
 #activites h2 {								
 	margin-bottom: 20px;
 }
-.grid { /*comment faire pour que ça wrap quand la fenêtre diminue ?*/
+.grid {
 	display: grid;
 	grid-template-rows: 400px;
 	grid-template-columns: repeat(4, 1fr);
@@ -463,7 +445,7 @@ input:focus::placeholder {
 	position: relative;
 	z-index: -1; 
 	object-fit: cover;
-	height: calc(100% - 45px); /*merci ô inconnu dont j'ai regardé le code par pur hasard sur un truc qui n'a rien à voir*/
+	height: calc(100% - 45px);
 }
 .boxShadow h3 {
 	margin: 10px 0 10px 5%;
