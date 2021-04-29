@@ -3,43 +3,27 @@
 <head>
 	<!--icones-->
 	<script src="https://kit.fontawesome.com/6fd9169ed4.js" crossorigin="anonymous"></script>
-	<!--police
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">-->
-	<!--trucs de base-->
+	<!--Feuilles de style-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="stylesTel.css">
 	<link rel="stylesheet" type="text/css" href="stylesTablette.css">
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hébergements</title>
 </head>
-<body>
-	<header class="ordi">
+<body> 
+	<header>
 		<img src="./images/logo/logoPetit.png" alt="logo " class="logo" />
 		<nav>
 			<ul>
 				<li><a class="stretch-link" href="#hebergements">Hébergements</a></li>
 				<li><a class="stretch-link" href="#activites">Activités</a></li>
-				<li id="inscription"><a class="stretch-link" href=""><strong>S'inscrire</strong></a></li>
+				<li id="inscription"><a class="stretch-link" href="#"><strong>S'inscrire</strong></a></li>
 			</ul>
 		</nav>	
 	</header>
 
-	<header class="tel">
-		<div class="ligne">
-			<img src="./images/logo/logoPetit.png" alt="logo " class="logo" />
-			<p><a href="#" ><strong>S'inscrire</strong></a></p>
-		</div>
-		<nav>
-			<ul>
-				<li><a class="stretch-link" href="#hebergements" >Hébergements</a></li>
-				<li><a class="stretch-link" href="#activites" >Activités</a></li>
-			</ul>
-		</nav>	
-	</header>
-
-	<div class="wrapper"> <!--double class-->
+	<div class="wrapper">
 		<section id="recherche">
 			<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 			<p>En plein centre ville ou en pleine nature</p>
@@ -54,7 +38,7 @@
 			<div class="ligne">
 				<h3>Filtres</h3>
 				<ul>
-					<li><a href="#"><i class="fas fa-money-bill-wave"></i><strong>&Eacute;conomique</strong></a></li>	 <!-- accent sur maj-->
+					<li><a href="#"><i class="fas fa-money-bill-wave"></i><strong>&Eacute;conomique</strong></a></li>
 					<li><a href="#"><i class="fas fa-child"></i><strong>Familial</strong></a></li>
 					<li><a href="#"><i class="fas fa-heart"></i><strong>Romantique</strong></a></li>
 					<li><a href="#"><i class="fas fa-dog"></i><strong>Animaux autorisés</strong></a></li>
@@ -67,7 +51,7 @@
 			<section id="classiques" class="colonne">
 				<h2>Hébergements à Marseille</h2>
 				<div class="ligne">
-					<div class="box">
+					<article class="box">
 						<a href="">
 							<img src="./images/hebergements/4_small/cannebiere.jpg" alt="Auberge la Cannebière" />
 							<div class="texte">
@@ -82,8 +66,8 @@
 								</div>
 							</div>
 						</a>
-					</div>
-					<div class="box">
+					</article>
+					<article class="box">
 						<a href="">
 							<img src="./images/hebergements/4_small/port.jpg" alt="Hôtel du port" />
 							<div class="texte">
@@ -98,8 +82,8 @@
 								</div>
 							</div>
 						</a>
-					</div>
-					<div class="box">
+					</article>
+					<article class="box">
 						<a href="">
 							<img src="./images/hebergements/4_small/mouettes.jpg" alt="Hôtel Les mouettes" />
 							<div class="texte">
@@ -114,10 +98,10 @@
 								</div>
 							</div>
 						</a>
-					</div>
+					</article>
 				</div>
 				<div class="ligne">
-					<div class="box">
+					<article class="box">
 						<a href="">
 							<img src="./images/hebergements/4_small/mer.jpg" alt="Hôtel de la mer" />
 							<div class="texte">
@@ -132,8 +116,8 @@
 								</div>
 							</div>
 						</a>
-					</div>
-					<div class="box">
+					</article>
+					<article class="box">
 						<a href="">
 							<img src="./images/hebergements/4_small/panier.jpg" alt="Auberge Le Panier" />
 							<div class="texte">
@@ -148,8 +132,8 @@
 								</div>
 							</div>
 						</a>
-					</div>
-					<div class="box">
+					</article>
+					<article class="box">
 						<a href="">
 							<img src="./images/hebergements/4_small/amina.jpg" alt="Hôtel chez Amina" />
 							<div class="texte">
@@ -164,7 +148,7 @@
 								</div>
 							</div>
 						</a>
-					</div>
+					</article>
 				</div>
 			<p><a href=""><strong>Afficher plus</strong></a></p>
 			</section>
@@ -173,7 +157,7 @@
 					<h2>Les plus populaires</h2>
 					<i class="fas fa-chart-line"></i>
 				</div>
-				<div class="boxLigne">
+				<article class="boxLigne">
 					<a href="">
 						<img src="./images/hebergements/4_small/soleilMatin.jpg" alt="Hôtel Le soleil du matin" />
 						<div class="texte">
@@ -190,8 +174,8 @@
 							</div>
 						</div>
 					</a>
-				</div>
-				<div class="boxLigne">
+				</article>
+				<article class="boxLigne">
 					<a href="">
 						<img src="./images/hebergements/4_small/coeurEau.jpg" alt="Au coeur de l'eau Chambres d'hôtes" />
 						<div class="texte">
@@ -208,8 +192,8 @@
 							</div>
 						</div>
 					</a>
-				</div>
-				<div class="boxLigne">
+				</article>
+				<article class="boxLigne">
 					<a href="">
 						<img src="./images/hebergements/4_small/bleuEtBlanc.jpg" alt="Hôtel Tout bleu et Blanc" />
 						<div class="texte">
@@ -226,51 +210,51 @@
 							</div>
 						</div>
 					</a>
-				</div>
+				</article>
 			</aside>
 		</div>
 		<section id="activites" class="colonne">
 			<h2>Activités à Marseille</h2>
 			<div class="grid">
-				<div class="boxShadow">
+				<article class="boxShadow">
 					<img src="./images/activites/3_medium/port.jpg" alt="Vieux Port" />
 					<a class="stretch-link" href="#">
 						<h3>Vieux Port</h3>
 					</a>
-				</div>
+				</article>
 			<div class="sousGrid">
-				<div class="boxShadow">
+				<article class="boxShadow">
 					<img src="./images/activites/3_medium/fort.jpg" alt="Fort de Pomègues" />
 					<a class="stretch-link" href="#">
 						<h3>Fort de Pomègues</h3>
 					</a>
-				</div>
-				<div class="boxShadow">
+				</article>
+				<article class="boxShadow">
 					<img src="./images/activites/3_medium/ile.jpg" alt="Iles du Frioul" />
 					<a class="stretch-link" href="">
 						<h3>&icirc;les du Frioul</h3>
 					</a>
-				</div>	
+				</article>	
 			</div>			
-				<div class="boxShadow">						
+				<article class="boxShadow">						
 					<img src="./images/activites/3_medium/parc.jpg" alt="Parc National des Calanques" />
 					<a class="stretch-link" href="">
 						<h3>Parc National des Calanques</h3>
 					</a>
-				</div>
+				</article>
 			<div class="sousGrid">
-				<div class="boxShadow">						
+				<article class="boxShadow">						
 					<img src="./images/activites/3_medium/ville.jpg" alt="Notre-Dame-de-la-Garde" />
 					<a class="stretch-link" href="">	
 						<h3>Notre-Dame-de-la-Garde</h3>
 					</a>
-				</div>
-				<div class="boxShadow">						
+				</article>
+				<article class="boxShadow">						
 					<img src="./images/activites/3_medium/longchamp.jpg" alt="Parc Longchamp" />
 					<a class="stretch-link" href="">
 						<h3>Parc Longchamp</h3>
 					</a>
-				</div>
+				</article>
 			</div>				
 			</div>
 		</section>

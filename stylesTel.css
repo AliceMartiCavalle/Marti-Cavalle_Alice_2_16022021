@@ -1,20 +1,11 @@
 /*Media queries tel*/			
 
-@media screen and (max-width: 768px) {
-
-	.tel {
-		display: block;
-	}
-	.ordi {									
-		display: none;
-	}
-
-	/*Pour l'ensemble de la page*/
+@media screen and (max-width: 767px) {
 
 		/*deco*/
 
 	h1 {
-		font-size: 1.5em;
+		font-size: 1.3em;
 	}
 	h2 {								
 		font-size: 1.4em;
@@ -23,11 +14,9 @@
 		/*disposition*/
 
 	body {
-							/* border: 1px solid #000; */
 		padding: 0;
 	}
 	.wrapper {					
-                                /* border: 1px solid blue; */
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -35,74 +24,58 @@
 
 	/*header*/
 
-	.tel { 			
-							/* border: 3px solid #000;									 */
-		flex-direction: column;
-		padding: 0 10px;
-	}
-	.tel .ligne {						
-										/* border: 1px solid blue;		 */
-		justify-content: space-between; /*"s'inscrire" pas complètement à droite, why*/
-		margin: 10px;
-	}
-    .logo {
-        width: 30%;
+    header {
+        margin: 0 30px 120px 30px;
+        position: relative;
     }
-	.tel .ligne p a {					
-											/* border: 1px solid #000;			 */
-		color: #0065FC;
-	}
-	.tel .ligne p a:active {
-		font-style: italic;
-	}
+    nav ul {
+        display: flex;
+    }
+    nav li:nth-child(1), nav li:nth-child(2), nav li:nth-child(3) {
+        border-bottom : 2px solid white;
+    }
+    nav li:nth-child(1), nav li:nth-child(2) {
+        position: absolute;
+        top : 80px;
+        width: 30%;
+        text-align: center;
+    }
+    nav li:nth-child(1) {
+        left: 0;
+    }
+    nav li:nth-child(2) {
+        right: 0;
+    }
+    nav li:nth-child(1):hover, nav li:nth-child(2):hover, nav li:nth-child(3):hover {
+        border-bottom: 2px solid #0065FC;
+        border-top: 2px solid white;
+    }
+    @media screen and (max-width: 320px) {
+        header {	
+            margin: 0 10px 120px 10px;
+        }
+    }
 
-
-	/*nav*/
-
-	.tel nav {									
-												/* border: 1px solid purple;						 */
-		display: flex;
-		justify-content: stretch; /*ici aussi se met en flex-start*/
-	}
-	.tel nav ul {
-								/* border: 1px solid red; */
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		width: 100%;
-	}
-	.tel nav ul li {	
-									/* border: 1px solid #000; */
-		/* border-bottom : 2px solid white; */
-		display: flex;
-		justify-content: center;
-	}
-	.tel nav ul li a {
-		/* border: 1px solid blue; */
-	}
-	.tel nav ul li:hover {
-		border-top: 2px solid rgba(0, 0, 0, 0);
-	}
-	.tel nav ul li:active {
-		border-bottom: 2px solid #0065FC;
-	}
-	.tel nav ul li:active > a {
-		color: #0065FC;
-	}
 
 	/*recherche*/
 
-	#recherche {					
+	#recherche {	
+        margin: 0 40px;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		margin-bottom: 20px;
-		padding: 0 10px;
 	}
-
-	#barre {							
-		align-self: center;
-	}
+    #barre {
+        margin-top: 20px;
+        /* display: flex; */
+    }
+    #barre input {
+        width: 190px;
+    }
+    #barre span:nth-child(3) {
+        display: none;
+    }
 	#barre i:last-child { /*loupe*/		
 		border-radius: 10px;
 		background-color: #0065FC;
@@ -110,14 +83,19 @@
 		color: white;
 		display: inline-block;
 	}
-	#barre i:last-child:active {
-		box-shadow: inset 5px 5px 5px blue; /*mouvement secondaire ?*/
+	#barre i:last-child:hover {
+		box-shadow: inset 5px 5px 5px blue;
 	}
+    @media screen and (max-width: 320px) {
+        #recherche {	
+            margin: 0 10px;
+        }
+    }
 
 	/*filtres*/
 
 	#filtres {
-		padding: 0 10px;
+		margin: 0 40px;
 	}
 	#filtres h3 {
 		margin-bottom: 15px;
@@ -126,7 +104,6 @@
 		flex-wrap: wrap;
 	}
 	#filtres .ligne ul li {
-												/*outline: 1px solid #000;*/
 		margin: 0 15px 15px 0;
 	}
 	#filtres .ligne ul li:active {
@@ -135,16 +112,20 @@
 	#filtres .ligne ul li:active > a {
 		color: #0065FC;
 	}
+    @media screen and (max-width: 320px) {
+        #filtres {	
+            margin: 0 10px;
+        }
+    }
 
 	/*hebergement*/
 
-	#hebergements {						/*border: 1px solid purple;*/		
+	#hebergements {							
 		flex-direction: column-reverse;
-		align-items: stretch; /*#classique n'est pas centré*/
+		align-items: stretch; 
 		margin-top: 10px;
 	}
 	#classiques {						
-										/* border: 1px solid purple; */
 		min-width: auto;
 		align-items: center;
 		background-color: white;
@@ -156,12 +137,10 @@
 		align-self: flex-start;
 	}
 	#classiques > .ligne {					
-										/* border: 1px solid blue; */
 		flex-direction: column;
 		width: 95%;
 	}
 	#classiques .ligne:nth-child(2), #classiques .ligne:nth-child(3) {
-		/*border: 1px solid green;*/ /*nth-child(2) ne cible que la 1ère colonne, pourquoi nth-child(3) cible également les étoiles ??*/
 		align-self: center;
 	}
 	.box {
@@ -171,15 +150,13 @@
 		max-height: 130px;
 	}
 
-	#populaires { /*cette partie est pas très responsive*/
-										/*border: 1px solid purple;*/
+	#populaires { 
 		padding: 20px;
 		width: calc(100% - 40px);
 		border-radius: 0;
 		margin: 0;
 	}
 	#populaires > .ligne {
-										/* border: 1px solid #000; */
 		width: calc(100% - 40px);
 		align-self: flex-start;
 		padding: 0 20px;
@@ -189,30 +166,23 @@
 		font-size: 1.4em;
 	}
 	.boxLigne a {						
-							/* border: 1px solid blue;									 */
-		/* justify-content: flex-start; */
-		/* align-items: stretch; */
 		margin: 10px;
-		/* width: calc(100% - 20px); */
-        /* max-width: 500px; */
 		height: 120px;
 	}
 	.boxLigne img {
-								/* border: 1px solid orange; */
 		margin: 3px;
 		height: 115px;
 	}
 	.boxLigne .texte {
-								/* border: 1px solid blue; */
 		margin : 5px 5px 5px 15px;
 		height: 90%;
-		justify-content: space-between; /*!fonctionne ici et pas sur feuille générale*/
+		justify-content: space-between; 
 	}
 
 	/*activités grid*/
 
 	#activites {						
-							/* border: 1px solid green; */
+        margin: 40px 0 0 0;                    
 		align-items: center;
 		width: 100%;
 		align-self: flex-end;
@@ -222,7 +192,6 @@
 		margin-left: 20px;
 	}
 	.grid { 							
-								/* border: 2px solid purple; */
 		padding: 0 20px;
         width: 90%;
 		grid-gap: 30px;
@@ -236,39 +205,36 @@
 		"4";
 	}
 	.sousGrid {						
-								/* border: 2px solid orange;									 */
 		grid-template: 1fr 1fr/1fr;
 		grid-gap: 30px;
 	}
 	.sousGrid:nth-child(2) {		
-										/* border: 2px solid pink; */
 		grid-area: 2;
 	}
 	.sousGrid:nth-child(4) {				
-										/* border: 1px solid red; */
 		grid-area: 4;
 		grid-template: 1fr 1fr/1fr;
 	}
-	.boxShadow {							/*border: 1px solid blue;*/
+	.boxShadow {
 		height: 200px;
 		width: 100%;
-		/* margin-bottom: 30px; */
 	}
 	.boxShadow:nth-child(2), .boxShadow:nth-child(5) {
 		margin: 0;
 	} 
-	.grid > .boxShadow:nth-child(1) {			/*border: 1px solid purple;*/
+	.grid > .boxShadow:nth-child(1) {			
 		grid-area: 1;
 	}
-	.boxShadow:nth-child(3) {				/*border: 1px solid green;*/
+	.boxShadow:nth-child(3) {				
 		grid-area: 3;
 	}
 
 	/*footer*/
+
 	footer {
 		flex-direction: column;
 		padding-left: 50px;
-		margin: 0;
+		margin: 60px 0 0 0;
 	}
 	footer .colonne {
 		margin-right: 10%; 
